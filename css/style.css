@@ -165,5 +165,150 @@ figure .btnNext:hover span {
   transform: translateX(-100%);
   opacity: 0;
 }
+figure section {
+  width: 20vw;
+  height: 65vh;
+  position: absolute;
+  left: 50%;
+  top: 150%;
+  transition: 1s;
+  margin-top: -30vh;
+  margin-left: -10vw;
+}
+figure section article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+figure section article:nth-of-type(1) {
+  transform: rotate(0deg) translateY(-100%);
+}
+figure section article:nth-of-type(2) {
+  transform: rotate(45deg) translateY(-100%);
+}
+figure section article:nth-of-type(3) {
+  transform: rotate(90deg) translateY(-100%);
+}
+figure section article:nth-of-type(4) {
+  transform: rotate(135deg) translateY(-100%);
+}
+figure section article:nth-of-type(5) {
+  transform: rotate(180deg) translateY(-100%);
+}
+figure section article:nth-of-type(6) {
+  transform: rotate(225deg) translateY(-100%);
+}
+figure section article:nth-of-type(7) {
+  transform: rotate(270deg) translateY(-100%);
+}
+figure section article:nth-of-type(8) {
+  transform: rotate(310deg) translateY(-100%);
+}
+figure section article .inner {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  padding: 5vh 2.5vw 8vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  opacity: 0.6;
+  transform: scale(0.8);
+  transition: all 1s;
+}
+figure section article .inner .pic {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  background-image: url(../img/member1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+figure section article .inner .pic::before, figure section article .inner .pic::after {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-image: inherit;
+  background-repeat: inherit;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+figure section article .inner .pic::before {
+  transform: translateY(10%);
+  filter: blur(20px) brightness(1.6);
+  animation: ani2 4s linear infinite;
+  animation-play-state: paused;
+}
+figure section article .inner .pic::after {
+  animation: ani 4s linear infinite;
+  animation-play-state: paused;
+}
+figure section article .inner .pic .dot {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  background: #e4f1ff;
+  z-index: 3;
+}
+figure section article .inner .pic.on::before {
+  animation-play-state: running;
+}
+figure section article .inner .pic.on::after {
+  animation-play-state: running;
+}
+figure section article .inner .txt {
+  position: relative;
+  text-align: center;
+}
+figure section article .inner .txt h2 {
+  font-size: 20px;
+  font-family: "arial";
+  color: #222;
+  margin-bottom: 2vh;
+}
+figure section article .inner .txt p {
+  font-size: 12px;
+  font-family: "arial";
+  color: #777;
+  margin-bottom: 3vh;
+}
+figure section article .inner .txt ul {
+  display: flex;
+  justify-content: space-around;
+}
+figure section article .inner .txt ul li {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+figure section article .inner .txt ul li.play {
+  transform: scale(1.5);
+  opacity: 0.8;
+}
+figure section article .inner .txt ul li.play:hover {
+  transform: scale(2);
+  opacity: 1;
+}
+figure section article .inner .txt ul li:hover {
+  transform: scale(1.5);
+  opacity: 0.8;
+}
+figure section article.on .inner {
+  opacity: 1;
+  transform: scale(1.1);
+}
 
 /*# sourceMappingURL=style.css.map */
